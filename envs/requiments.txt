@@ -1,0 +1,38 @@
+bcrypt @ file:///opt/concourse/worker/volumes/live/1172806a-f878-48a0-7af5-41c3e695d608/volume/bcrypt_1597936167937/work
+brotlipy==0.7.0
+certifi==2021.5.30
+cffi @ file:///opt/concourse/worker/volumes/live/6ed3f91b-28f6-4d58-6a9b-7a5e864c6554/volume/cffi_1625814710543/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1655412516417/work
+conda==4.10.3
+conda-package-handling @ file:///Users/runner/miniforge3/conda-bld/conda-package-handling_1618231694638/work
+cryptography @ file:///opt/concourse/worker/volumes/live/efc30a4d-1b2f-4c46-6f02-ff41b1cfc0e9/volume/cryptography_1635366582988/work
+docutils @ file:///opt/concourse/worker/volumes/live/50000348-25d1-46cd-6387-121154750d09/volume/docutils_1620827969326/work
+dropbox==5.2.1
+filechunkio==1.6
+ftputil==3.2
+idna @ file:///tmp/build/80754af9/idna_1637925883363/work
+mamba @ file:///Users/runner/miniforge3/conda-bld/mamba_1634161786588/work
+mkl-fft==1.3.0
+mkl-random @ file:///opt/concourse/worker/volumes/live/5e7b5fb7-ea4d-49dc-799a-182d6f668ac7/volume/mkl_random_1626186074053/work
+mkl-service==2.4.0
+numpy==1.16.6
+pandas==1.1.5
+paramiko @ file:///opt/conda/conda-bld/paramiko_1640109032755/work
+psutil @ file:///opt/concourse/worker/volumes/live/b7b330bc-c1c6-4c30-580a-0a0cc9db28ef/volume/psutil_1612298008573/work
+pycosat @ file:///Users/runner/miniforge3/conda-bld/pycosat_1624996555153/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+PyNaCl @ file:///opt/concourse/worker/volumes/live/a6750b3b-17f1-43b9-7197-242eb1783227/volume/pynacl_1595009148458/work
+pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
+pysftp==0.2.9
+PySocks @ file:///opt/concourse/worker/volumes/live/286ddfa9-f2fd-40b3-4c68-b14dbfd7c9fa/volume/pysocks_1605305809963/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytz==2021.3
+PyYAML==5.4.1
+requests @ file:///opt/conda/conda-bld/requests_1641824580448/work
+ruamel-yaml-conda @ file:///Users/runner/miniforge3/conda-bld/ruamel_yaml_1624999682904/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+snakemake==3.13.3
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1677887202771/work
+urllib3 @ file:///opt/conda/conda-bld/urllib3_1643638302206/work
+wrapt==1.12.1
