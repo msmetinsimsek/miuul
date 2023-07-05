@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #Ekstra Aktivite 1: Argümanları İle Çalışan Bir Bash Scripti Oluşturmak
-tRNAscan-SE -o $1 $2
+# tRNAscan-SE -o $1 $2
 
 
 # output alma
-tRNAscan-SE -o G_intestinalis.trna G_intestinalis.fasta
+# tRNAscan-SE -o G_intestinalis.trna G_intestinalis.fasta
 
 #Bu scripti aşağıdaki gibi çalıştırabiliriz:
 #termin alde çalışıtr #bash run_trnascan_args.sh G_intestinalis.trna1 G_intestinalis.fasta
@@ -30,6 +30,6 @@ rule trna_scan:
   input:
     "G_intestinalis.fasta"
   output:
-    "G_intestinalis.trna"
+    "G_intestinalis.trna2"
   shell:
     "tRNAscan-SE -o {output} {input}"
