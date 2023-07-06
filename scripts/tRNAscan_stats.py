@@ -1,4 +1,3 @@
-
 from snakemake.shell import shell
 
 genome = snakemake.input.genome

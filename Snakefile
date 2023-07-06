@@ -1,6 +1,6 @@
 rule all:
     input:"output/tRNA_scan_result.txt"
-        "output/G_intestinalis.tRNA"
+    "output/G_intestinalis.tRNA"
 
 rule tRNAscan:
     input: "resource/G_intestinalis.fasta"
@@ -9,10 +9,10 @@ rule tRNAscan:
 
 rule tRNAscan_stats:
     input:
-        genome= "resource/G_intestinalis.fasta"
+        genome = "resource/G_intestinalis.fasta"
     output:
-        tRNA = "output/G_intestinalis.tRNA"
-        stats = "output/G_intestinalis.tRNA"
+        tRNA = "output/G_intestinalis.tRNA",
+        stats = "output/G_intestinalis.stats"
     params:
         threads = 2
     conda:
