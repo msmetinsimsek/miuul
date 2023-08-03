@@ -33,6 +33,7 @@ plt.show()
 
 
 
+
 # heatmap
 
 pivot_table = pd.pivot_table(blast_G_muris, values="lenght", index="qseqid", columns="sseqid")
