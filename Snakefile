@@ -1,21 +1,24 @@
 rule all:
-    input:"output/tRNA_scan_result.txt",
-           "output/G_intestinalis.tRNA",
-            expand("output/tRNAscan/{sp}.tRNA", sp=["G_muris", "G_intestinalis"]),
-            expand("output/blastn/G_intestinalis/{sp}.blastn", sp=["G_muris", "S_salmonicida"])
-
-
-
+   input:
+        "output/tRNA_scan_result.txt",
+        "output/G_intestinalis.tRNA",
+        "output/G_intestinalis.stats",
+        "output/tRNAscan/G_intestinalis.tRNA",
+        expand("output/tRNAscan/{sp}.tRNA", sp=["G_muris", "G_intestinalis"]),
+        expand("output/blastn/G_intestinalis/{sp}.blastn", sp=["G_muris", "S_salmonicida"])
 
 
 rule tRNAscan:
     input: "resource/G_intestinalis.fasta"
     output: "output/tRNA_scan_result.txt",
+    conda:
+         "envs/environment.yml"
     shell: """tRNAscan-SE {input} -o {output}"""
+
 
 rule tRNAscan_stats:
     input:
-        genome = "resource/G_intestinalis.fasta"
+        genome = "resource/genomes/G_intestinalis.fasta"
     output:
         tRNA = "output/G_intestinalis.tRNA",
         stats = "output/G_intestinalis.stats"
@@ -58,15 +61,14 @@ rule makeblastdb:
     shell:
         "makeblastdb -dbtype nucl -in {input} -out {params.outname}"
 
-
 rule blastn:
     input:
-        query= "reource/{type}/query/{query}.fasta",
+        query= "resource/{type}/query/{query}.fasta",
         db= "output/{type}/db/{db}.ndb"
     output:
-        "output/{type}/{db}/{query}.basltn"
+        "output/{type}/{db}/{query}.blastn"
     params:
-        perc_indentity=95,
+        perc_identity=95,
         outfmt=6,
         num_threads=2,
         max_target_seqs=2,
@@ -76,4 +78,3 @@ rule blastn:
         "envs/environment.yml"
     script:
         "scripts/blastn.py"
-

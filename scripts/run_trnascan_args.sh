@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Ekstra Aktivite 1: Argümanları İle Çalışan Bir Bash Scripti Oluşturmak
-# tRNAscan-SE -o $1 $2
+tRNAscan-SE -o $1 $2
 
 
 # output alma

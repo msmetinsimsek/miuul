@@ -1,4 +1,4 @@
-#!/usr/bin/bash
-tRNAscan-SE -o $1 $2
+#!/bin/bash
+tRNAscan-SE $1 -o $2
 
-tRNAscan-SE -o G_intestinalis.tRNA G_intestinalis.fasta
+# tRNAscan-SE -o G_intestinalis.tRNA G_intestinalis.fasta
