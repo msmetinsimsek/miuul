@@ -3,6 +3,8 @@ rule all:
         "output/tRNA_scan_result.txt",
         "output/G_intestinalis.tRNA",
         "output/G_intestinalis.stats",
+       # "output/S_salmonicida.tRNA",
+       # "output/S_salmonicida.stats",
         "output/tRNAscan/G_intestinalis.tRNA",
         expand("output/tRNAscan/{sp}.tRNA", sp=["G_muris", "G_intestinalis"]),
         expand("output/blastn/G_intestinalis/{sp}.blastn", sp=["G_muris", "S_salmonicida"])
@@ -10,6 +12,7 @@ rule all:
 
 rule tRNAscan:
     input: "resource/G_intestinalis.fasta"
+ #: input: "resource/S_salmonicida.fasta"
     output: "output/tRNA_scan_result.txt",
     conda:
          "envs/environment.yml"
@@ -22,6 +25,12 @@ rule tRNAscan_stats:
     output:
         tRNA = "output/G_intestinalis.tRNA",
         stats = "output/G_intestinalis.stats"
+    ## rule tRNAscan_stats:
+#     input:
+#         genome = "resource/genomes/S_salmonicida.fasta"
+#     output:
+#         tRNA = "output/S_salmonicida.tRNA",
+#         stats = "output/S_salmonicida.stats"
     params:
         threads = 2
     conda:
